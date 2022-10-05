@@ -1,0 +1,14 @@
+.hotels-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin: auto;
+    gap: 15px;
+    margin-bottom: 150px;
+}
+
+@media screen and (max-width: 740px) {
+    .hotels-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

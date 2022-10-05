@@ -1,0 +1,123 @@
+.location-filter-container {
+    display: flex;
+    align-items: top;
+    padding: 10px 20px;
+    margin: 40px auto;
+    height: 90px;
+    width: 90%;
+    column-gap: 10px;
+    background: whitesmoke;
+    position: sticky;
+    top: 75px;
+    z-index: 10;
+}
+
+.active {
+    top: 70px;
+    height: 90px;
+}
+
+.location-filter-container > .locations {
+    --locations-index: 0;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex: 1;
+    column-gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    transform: translateX(calc(var(--locations-index) * -10%));
+    transition: transform .5s ease-in-out;
+}
+
+.location-filter-container > .locations::-webkit-scrollbar-track {
+    /* border: 1px solid rgb(83, 83, 83); */
+    padding: 2px 0;
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+
+.location-filter-container > .locations::-webkit-scrollbar {
+    height: 5px;
+    cursor: pointer !important;
+}
+
+.location-filter-container > .locations::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #717171;
+    /* border: 1px solid #000; */
+    cursor: pointer;
+  }
+
+.locations > .btn-container {
+    display: flex;
+}
+
+.location-filter-container > svg {
+    border-radius: 50%;
+    border: 1px solid #717171;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    z-index: 10;
+}
+
+.location-filter-container > svg:hover {
+    scale: 1.05;
+}
+
+.location-filter-container > .locations > button {
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    row-gap: 8px;
+    font-size: 10px;
+    /* width: auto; */
+    outline: none;
+    height: inherit;
+}
+
+.location-filter-container > .locations > button:hover, .location-filter-container > .location-filters:hover  {
+    cursor: pointer;
+}
+
+.location-filter-container > .locations > button > img {
+    width: 20px;
+    height: 20px;
+}
+
+.location-filter-container > .locations > button > span {
+    color: #717171;
+    font-weight: 600;
+    align-items: left;
+    flex-wrap: nowrap;
+}
+
+.location-filters-flex {
+    background: whitesmoke;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.location-filter-container > .location-filters-flex > .location-filters {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #717171;
+    padding: 10px;
+    column-gap: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.location-filter-container > .location-filters-flex > .location-filters > span {
+    font-size: 11px;
+    font-weight: 600;
+}
